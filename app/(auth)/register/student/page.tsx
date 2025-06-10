@@ -1,9 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { LanguageSelector } from "@/components/language-selector";
 import { ProgressIndicator } from "@/components/registration/progress-indicator";
 import { PersonalInfoStep } from "@/components/student-registration/personal-info-step";
 import { AcademicInfoStep } from "@/components/student-registration/academic-info-step";
