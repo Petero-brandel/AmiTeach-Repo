@@ -54,7 +54,7 @@
   --primary: oklch(0.6 0.12 250); /* blue */
   --primary-foreground: oklch(0.99 0.01 250);
   --secondary: oklch(0.92 0.03 250); /* very light blue */
-  --secondary-foreground: oklch(0.22 0.137 270.33);
+  --secondary-foreground: oklch(0.3 0.1851 270.72);
   --muted: oklch(0.96 0.01 250); /* even lighter blue */
   --muted-foreground: oklch(0.6 0.04 260);
   --accent: oklch(0.92 0.03 250);
