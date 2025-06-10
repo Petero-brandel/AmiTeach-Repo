@@ -73,7 +73,7 @@ export async function getStudents(
 ) {
   try {
     const offset = (page - 1) * limit;
-    let query = db
+    const query = db
       .select({
         id: student.id,
         userId: student.userId,
@@ -108,7 +108,7 @@ export async function getStudents(
 
 export async function getStudentsCount(search?: string, status?: string) {
   try {
-    let query = db
+    const query = db
       .select({ count: count() })
       .from(student)
       .leftJoin(user, eq(student.userId, user.id));
