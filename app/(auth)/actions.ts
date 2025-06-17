@@ -2,17 +2,9 @@
 
 import { z } from "zod";
 
-import {
-  createParent,
-  createStudent,
-  createTeacher,
-  createUser,
-  getUser,
-} from "@/lib/db/queries";
+import { createUser, getUser } from "@/lib/db/queries";
 
 import { signIn } from "./auth";
-import { generateId } from "@/lib/utils";
-import { UserRole } from "@/lib/db/schema";
 
 // Login validation schema
 const loginSchema = z.object({
