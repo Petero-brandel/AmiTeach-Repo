@@ -247,7 +247,7 @@ export function LoginForm({
                   transition={{ delay: 0.8 }}
                   className="text-center text-sm text-gray-600"
                 >
-                  Don't have an account?{" "}
+                  Don&apos;t have an account?{" "}
                   <a
                     href="/register"
                     className="text-blue-600 hover:text-blue-700 font-semibold underline underline-offset-2"
@@ -290,7 +290,7 @@ export function LoginForm({
                   className="text-lg opacity-90 mb-8"
                 >
                   Welcome back! Your learning journey continues with AMI
-                  Education's personalized tutoring platform.
+                  Education&apos;s personalized tutoring platform.
                 </motion.p>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
