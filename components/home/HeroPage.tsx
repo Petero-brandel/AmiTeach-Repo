@@ -83,7 +83,7 @@ export default function HeroSection() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                Transform Your Child's
+                Transform Your Child&apos;s
                 <span className="block text-blue-300">Education Journey</span>
               </motion.h1>
               <motion.p
@@ -92,9 +92,10 @@ export default function HeroSection() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
-                Join Africa's premier hybrid learning platform. Our innovative
-                60% offline, 40% online model delivers personalized education
-                that adapts to your child's unique learning style.
+                Join Africa&apos;s premier hybrid learning platform. Our
+                innovative 60% offline, 40% online model delivers personalized
+                education that adapts to your child&apos;s unique learning
+                style.
               </motion.p>
             </div>
             {/* CTA Buttons with enhanced styling */}

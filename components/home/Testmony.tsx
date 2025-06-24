@@ -115,10 +115,10 @@ const TestimonialSection = () => {
                     <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                   </motion.div>
                 ))}
-              </div>
+              </div>{" "}
               {/* Testimonial text */}
               <p className="text-gray-700 mb-6 italic leading-relaxed relative z-10">
-                "{testimonial.text}"
+                &ldquo;{testimonial.text}&rdquo;
               </p>
               {/* Subject badge */}
               <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-medium mb-4">
