@@ -1,8 +1,11 @@
 "use server";
 
 import { z } from "zod";
+import { redirect } from "next/navigation";
 
-import { createUser, getUser } from "@/lib/db/queries";
+import { createUser, db, getUser } from "@/lib/db/queries";
+import { teacher, parent } from "@/lib/db/schema"; // import your tables
+import { eq } from "drizzle-orm"; // for querying
 
 import { signIn } from "./auth";
 
@@ -78,24 +81,43 @@ export const register = async (
       name: formData.get("name"),
       email: formData.get("email"),
       password: formData.get("password"),
-      image: formData.get("image"),
+      image: formData.get("image") || "",
       role: formData.get("role"),
     });
 
     // Check if user already exists
-    const [user] = await getUser(validatedData.email);
+    const [existingUser] = await getUser(validatedData.email);
 
-    if (user) {
+    if (existingUser) {
       return { status: "user_exists" } as RegisterActionState;
     }
 
-    await createUser(
+    // Create user and get the new user's id
+    const newUser = await createUser(
       validatedData.email,
       validatedData.password,
       validatedData.name,
       validatedData.role,
       validatedData.image
     );
+
+    // Fetch the created user
+    const [createdUser] = await getUser(validatedData.email);
+
+    console.log("Created user:", createdUser);
+
+    // Create Teacher or Parent record if applicable
+    if (createdUser && createdUser.role === "teacher") {
+      await db.insert(teacher).values({
+        userId: createdUser.id,
+        teacherId: `T-${Date.now()}`, // Todo: Use a better unique generator
+      });
+    } else if (createdUser && createdUser.role === "parent") {
+      await db.insert(parent).values({
+        userId: createdUser.id,
+        parentId: `P-${Date.now()}`, // Todo: Use a better unique generator
+      });
+    }
 
     await signIn("credentials", {
       email: validatedData.email,
