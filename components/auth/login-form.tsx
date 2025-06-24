@@ -72,7 +72,7 @@ export function LoginForm({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <Card className="overflow-hidden shadow-2xl border-0 bg-white/90 backdrop-blur-md">
+        <Card className="p-0 overflow-hidden shadow-2xl border-0 bg-white/90 backdrop-blur-md">
           <CardContent className="grid p-0 md:grid-cols-2">
             <Form action={handleSubmit} className="p-8 md:p-10">
               <div className="flex flex-col gap-6">
