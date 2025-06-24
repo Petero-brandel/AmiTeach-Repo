@@ -132,10 +132,10 @@ export default function ParentStep3() {
             🎉 Almost Done!
           </h3>
           <p className="text-blue-800 dark:text-blue-200 text-sm">
-            Once you complete your profile, we'll start matching you with
-            qualified teachers in your area. You'll be able to view teacher
-            profiles, schedule sessions, and track your children's progress from
-            your dashboard.
+            Once you complete your profile, we&apos;ll start matching you with
+            qualified teachers in your area. You&apos;ll be able to view teacher
+            profiles, schedule sessions, and track your children&apos;s progress
+            from your dashboard.
           </p>
         </motion.div>
 

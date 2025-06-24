@@ -64,7 +64,7 @@ export default function ParentStep1() {
             required
           />
           <p className="text-sm text-gray-500 mt-1">
-            We'll use this to contact you about your child's progress
+            We&apos;ll use this to contact you about your child&apos;s progress
           </p>
         </motion.div>
 
