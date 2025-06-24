@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress-green";
 
-import "./styles.css";
 import { Button } from "@/components/ui/button";
 
 interface OnboardingLayoutProps {
